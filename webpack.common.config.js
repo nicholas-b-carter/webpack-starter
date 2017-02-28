@@ -1,3 +1,5 @@
+const utilities = require('./webpack-config/utilities/utilities');
+
 function CommonConfig() {
     return {
         target: "web",
@@ -8,6 +10,7 @@ function CommonConfig() {
         resolve: {
             extensions: ['.js', '.json', '.ts'],
         },
+        externals: utilities.mapArrayOfObjectPropToProp(require('./webpack-config/external-libraries.conf').common, 'name', 'importName')
     }
 }
 
