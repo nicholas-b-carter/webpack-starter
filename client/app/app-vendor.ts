@@ -8,8 +8,6 @@ import IComponentOptions = angular.IComponentOptions;
 
 class AppController implements IController {
     constructor($scope: angular.IScope, $timeout) {
-        "ngInject";
-
     }
 
     $postLink() {
@@ -23,6 +21,8 @@ let componentOptions: IComponentOptions = {
     controller: AppController,
     controllerAs: 'vm'
 };
+
+AppController.$inject = ['$scope', '$timeout'];
 
 
 angular.module('app', [])

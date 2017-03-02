@@ -1,8 +1,9 @@
 module.exports = {
     common: [
         require('./loaders/es6-babel.loader.js'),
-        // require('./loaders/es6-babel-typescript.loader.js'),
-        require('./loaders/es6-babel-typescript-ng-annotate.loader.js'),
+        require('./loaders/es6-babel-typescript.loader.js'),
+        // *** Currently BREAKS source maps, do not use ***
+        // require('./loaders/es6-babel-typescript-ng-annotate.loader.js'),
         require('./loaders/file.loader.js'),
         require('./loaders/url.loader.js'),
         ...require('./loaders/expose.loader.js')],
