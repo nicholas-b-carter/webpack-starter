@@ -10,6 +10,7 @@ const extractTextPluginConf = require('./plugins/extract-text.plugin.conf.js');
 const webpackVisualizerPlugin = require('./plugins/webpack-visualizer.plugin.conf');
 const contextReplacementPlugin = require('./plugins/context-replacement.plugin.conf.js');
 const lodashModuleReplacementPlugin = require('./plugins/lodash-webpack.plugin.conf.js');
+const purifyCSSplugin = require('./plugins/purify-css.plugin.conf.js');
 
 module.exports = {
     common: [
@@ -33,7 +34,8 @@ module.exports = {
         // closureCompilerPluginConf
         uglifyPluginConf,
         webpackVisualizerPlugin,
-        duplicatePackageCheckerPluginConf
+        duplicatePackageCheckerPluginConf,
+        purifyCSSplugin
     ],
     prodApp: [
         commonChunkPluginConf.app,
@@ -43,7 +45,8 @@ module.exports = {
         extractTextPluginConf.prod,
         uglifyPluginConf,
         webpackVisualizerPlugin,
-        duplicatePackageCheckerPluginConf
+        duplicatePackageCheckerPluginConf,
+        purifyCSSplugin
     ],
     prodCordova: [
         commonChunkPluginConf.cordova,
@@ -53,7 +56,8 @@ module.exports = {
         extractTextPluginConf.prod,
         uglifyPluginConf,
         webpackVisualizerPlugin,
-        duplicatePackageCheckerPluginConf
+        duplicatePackageCheckerPluginConf,
+        purifyCSSplugin
     ]
 };
 

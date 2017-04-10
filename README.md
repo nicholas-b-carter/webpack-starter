@@ -147,6 +147,7 @@ The Cordova command copy `dist/cordova/` to `client/cordova/www` to be able to b
  - Comes with many useful Webpack plugins:
     - CommonsChunkPlugin
     - CopyPlugin
+    - [PurifyCSS](https://github.com/webpack-contrib/purifycss-webpack)
     - DuplicatePackageChecker
     - ExtractText (to output `.css` files)
     - HtmlPlugin to create HTML for each entry
@@ -167,5 +168,8 @@ in this setup, check `closure-compiler.plugin.conf.js` for more details.
 ### See Also & Credits
 
 http://www.favicon-generator.org/
+
 https://tomitm.github.io/appmanifest/
+
+https://github.com/webpack-contrib/purifycss-webpack
 
